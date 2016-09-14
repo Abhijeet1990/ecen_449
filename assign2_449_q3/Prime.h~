@@ -1,0 +1,2 @@
+
+int prime(int *B,int M);

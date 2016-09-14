@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include"Abhijeet_HW2_Q3_sort.h"
+#include"Abhijeet_HW2_Q3_Prime.h"
+
+int main()
+{
+int i,n;
+printf("enter the array size \n");
+scanf("%d",&n);
+printf("enter the numbers \n");
+int *A=malloc(sizeof(int)*(n));
+for(i=0;i<n;i++)
+{scanf("%d",&A[i]);
+}
+
+sort_array(A,n);
+
+for(i=0;i<n;i++)
+{printf("sorted list element %d \n",A[i]);
+}
+int l=prime(A,n);
+A=(int*)realloc(A,l);
+
+for(i=0;i<l;i++)
+{printf("prime list element %d \n",A[i]);
+}
+return 0;
+}

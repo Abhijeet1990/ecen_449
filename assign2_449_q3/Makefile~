@@ -1,0 +1,24 @@
+
+CC=gcc
+CFLAGS=-c -Wall
+all: ThirdAns
+
+ThirdAns: main.o swap.o sort_array.o Prime.o 
+	$(CC) main.o swap.o sort_array.o Prime.o -o ThirdAns
+
+main.o: Abhijeet_HW2_Q3_main.c 
+	$(CC) $(CFLAGS) Abhijeet_HW2_Q3_main.c
+
+swap.o: Abhijeet_HW2_Q3_swap.c
+	$(CC) $(CFLAGS) Abhijeet_HW2_Q3_swap.c
+
+sort_array.o: Abhijeet_HW2_Q3_sort.c 
+	      $(CC) $(CFLAGS) Abhijeet_HW2_Q3_sort.c 
+
+Prime.o: Abhijeet_HW2_Q3_Prime.c 
+	$(CC) $(CFLAGS) Abhijeet_HW2_Q3_Prime.c
+
+
+
+clean:
+	rm *o ThirdAns 
